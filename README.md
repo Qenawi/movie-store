@@ -2,11 +2,11 @@
 
 ## Screens
 
-- Log in screen
-- Sign up screen
-- Home screen
+- Log in screen (@KarimMetwally19)
+- Sign up screen (@KarimMetwally19)
+- Home screen 
 - Movie details
-- Watchlist
+- Watchlist (@KarimMetwally19)
 
 ## Preview
 
