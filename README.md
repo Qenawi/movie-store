@@ -4,8 +4,8 @@
 
 - Log in screen (@KarimMetwaly19)
 - Sign up screen (@KarimMetwaly19)
-- Home screen 
-- Movie details
+- Home screen (@youssef-attai)
+- Movie details (@youssef-attai)
 - Watchlist (@KarimMetwaly19)
 
 ## Preview
