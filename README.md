@@ -2,11 +2,11 @@
 
 ## Screens
 
-- Log in screen [@KarimMetwaly19] (https://github.com/KarimMetwaly19)
-- Sign up screen [@KarimMetwaly19] (https://github.com/KarimMetwaly19)
-- Home screen [@youssef-attai] (https://github.com/youssef-attai)
-- Movie details [@youssef-attai] (https://github.com/youssef-attai)
-- Watchlist [@KarimMetwaly19] (https://github.com/KarimMetwaly19)
+- Log in screen (@KarimMetwaly19) [https://github.com/KarimMetwaly19]
+- Sign up screen (@KarimMetwaly19) [https://github.com/KarimMetwaly19]
+- Home screen (@youssef-attai) [https://github.com/youssef-attai]
+- Movie details (@youssef-attai) [https://github.com/youssef-attai]
+- Watchlist (@KarimMetwaly19) [https://github.com/KarimMetwaly19]
 
 ## Preview
 
