@@ -1,5 +1,14 @@
 # Movie store
 
+.photos {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
 <div class="photos">
 <a href="Github Profile url"> 
   <img href="Github profile image source"> 
