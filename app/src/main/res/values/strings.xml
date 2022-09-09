@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MovieStoreNew</string>
+    <string name="nav_item_title_home">Home</string>
+    <string name="nav_item_title_watchlist">Watch list</string>
 </resources>
