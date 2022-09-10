@@ -30,7 +30,12 @@
             android:backgroundTint="@color/blue_grey_light"
             android:drawableEnd="@drawable/ic_search"
             android:drawableTint="@color/blue_grey_lighter"
+            android:fontFamily="@font/louis_george_cafe_font_family"
             android:paddingVertical="12dp"
+            android:text="@string/search"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_grey_lighter"
             app:cornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -60,27 +65,28 @@
             app:tabIndicatorColor="@color/blue_grey_light"
             app:tabIndicatorHeight="4dp"
             app:tabMode="scrollable"
+            app:tabTextAppearance="@style/tabLayoutStyle"
             app:tabTextColor="@color/white">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Now playing" />
+                android:text="@string/now_playing" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Upcoming" />
+                android:text="@string/upcoming" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Top rated" />
+                android:text="@string/top_rated" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Popular" />
+                android:text="@string/popular" />
 
         </com.google.android.material.tabs.TabLayout>
 

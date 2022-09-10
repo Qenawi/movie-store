@@ -3,4 +3,10 @@
     <string name="nav_item_title_home">Home</string>
     <string name="nav_item_title_watchlist">Watch list</string>
     <string name="nav_item_title_search">Search</string>
+    <string name="now_playing">Now playing</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="top_rated">Top rated</string>
+    <string name="popular">Popular</string>
+    <string name="search">Search</string>
+    <string name="x_minutes">%d minutes</string>
 </resources>

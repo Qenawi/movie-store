@@ -30,12 +30,19 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
         val tabLayout: TabLayout = view.findViewById(R.id.tabLayout)
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                if (tab?.text == "Top rated") {
-                    (moviesRecyclerView.adapter as MoviesAdapter).filterMovies("Jurassic World Dominion")
-                } else if (tab?.text == "Upcoming") {
-                    (moviesRecyclerView.adapter as MoviesAdapter).filterMovies("The Godfather")
-                } else {
-                    (moviesRecyclerView.adapter as MoviesAdapter).resetMovies()
+                when (tab?.text) {
+                    getString(R.string.now_playing) -> {
+//                        (moviesRecyclerView.adapter as MoviesAdapter).filterMovies("Jurassic World Dominion")
+                    }
+                    getString(R.string.upcoming) -> {
+//                        (moviesRecyclerView.adapter as MoviesAdapter).filterMovies("Jurassic World Dominion")
+                    }
+                    getString(R.string.top_rated) -> {
+//                        (moviesRecyclerView.adapter as MoviesAdapter).filterMovies("The Godfather")
+                    }
+                    getString(R.string.popular) -> {
+//                        (moviesRecyclerView.adapter as MoviesAdapter).resetMovies()
+                    }
                 }
             }
 
