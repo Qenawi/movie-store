@@ -18,7 +18,7 @@ class TopMoviesAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopMoviesViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.movie_card, parent, false)
+            .inflate(R.layout.top_movie_card, parent, false)
         return TopMoviesViewHolder(view)
     }
 
