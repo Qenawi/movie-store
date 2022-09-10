@@ -16,9 +16,7 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
 
         val moviesRecyclerView: RecyclerView = view.findViewById(R.id.moviesGrid_recyclerView)
         moviesRecyclerView.adapter = MoviesAdapter(
-            Datasource.getMovies() + Datasource.getMovies() + Datasource.getMovies() +
-                    Datasource.getMovies() + Datasource.getMovies() + Datasource.getMovies() +
-                    Datasource.getMovies() + Datasource.getMovies() + Datasource.getMovies()
+            Datasource.getMovies()
         )
 
         val searchBar: Button = view.findViewById(R.id.searchBar_button)
@@ -32,16 +30,16 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 when (tab?.text) {
                     getString(R.string.now_playing) -> {
-//                        (moviesRecyclerView.adapter as MoviesAdapter).filterMovies("Jurassic World Dominion")
+                        (moviesRecyclerView.adapter as MoviesAdapter).resetMovies()
                     }
                     getString(R.string.upcoming) -> {
-//                        (moviesRecyclerView.adapter as MoviesAdapter).filterMovies("Jurassic World Dominion")
+                        (moviesRecyclerView.adapter as MoviesAdapter).filterMovies("Jurassic World Dominion")
                     }
                     getString(R.string.top_rated) -> {
-//                        (moviesRecyclerView.adapter as MoviesAdapter).filterMovies("The Godfather")
+                        (moviesRecyclerView.adapter as MoviesAdapter).filterMovies("The Shawshank Redemption")
                     }
                     getString(R.string.popular) -> {
-//                        (moviesRecyclerView.adapter as MoviesAdapter).resetMovies()
+                        (moviesRecyclerView.adapter as MoviesAdapter).filterMovies("Spider-Man: No Way Home")
                     }
                 }
             }
