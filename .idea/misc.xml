@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bottom_nav_item_selector.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_bookmark.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_home.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_outline_home_24.xml" value="0.2015" />
@@ -10,11 +11,13 @@
         <entry key="app/src/main/res/font-v26/made_tommy_font_family.xml" value="0.21897435897435896" />
         <entry key="app/src/main/res/font/louis_george_cafe_font_family.xml" value="0.19166666666666668" />
         <entry key="app/src/main/res/font/made_tommy_font_family.xml" value="0.18" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/details_fragment.xml" value="0.19270833333333334" />
-        <entry key="app/src/main/res/layout/home_fragment.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/home_fragment.xml" value="0.18" />
         <entry key="app/src/main/res/layout/login_fragment.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/movie_card.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/register_fragment.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/layout/search_fragment.xml" value="0.75" />
         <entry key="app/src/main/res/layout/watchlist_fragment.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/menu/nav_items.xml" value="0.19270833333333334" />
       </map>

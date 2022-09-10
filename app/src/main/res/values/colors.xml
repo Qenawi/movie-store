@@ -8,9 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blue_grey">#242A32</color>
-    <color name="blue_grey_light">#415165</color>
+    <color name="blue_grey_light">#3A3F47</color>
+    <color name="blue_grey_lighter">#616267</color>
     <color name="blue_grey_dark">#0E131B</color>
-    <color name="blue">#0091ea</color>
+    <color name="blue">#0296E5</color>
     <color name="blue_light">#64c1ff</color>
     <color name="blue_dark">#0064b7</color>
 </resources>

@@ -23,7 +23,7 @@
         android:id="@+id/line"
         android:background="@color/blue"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         app:layout_constraintBottom_toTopOf="@id/bottom_nav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -31,10 +31,12 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
+        app:itemTextColor="@color/bottom_nav_item_selector"
+        app:itemIconTint="@color/bottom_nav_item_selector"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/blue_grey"
-        android:paddingVertical="10dp"
+        android:paddingVertical="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
