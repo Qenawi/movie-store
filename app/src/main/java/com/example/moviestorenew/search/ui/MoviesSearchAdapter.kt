@@ -33,11 +33,11 @@ class MoviesSearchAdapter(
     }
 
     override fun onBindViewHolder(holder: MoviesSearchViewHolder, position: Int) {
-        Picasso.get().load(displayedMovies[position].imageURL).into(holder.imageView)
+        Picasso.get().load(displayedMovies[position].imageUrl).into(holder.imageView)
         holder.titleTextView.text = displayedMovies[position].title
-        holder.genreTextView.text = displayedMovies[position].genre
-        holder.yearTextView.text = "${displayedMovies[position].year}"
-        holder.durationTextView.text = context.getString(R.string.x_minutes, displayedMovies[position].duration)
+//        holder.genreTextView.text = displayedMovies[position].genre
+//        holder.yearTextView.text = "${displayedMovies[position].year}"
+//        holder.durationTextView.text = context.getString(R.string.x_minutes, displayedMovies[position].duration)
     }
 
     override fun getItemCount() = displayedMovies.size

@@ -9,9 +9,9 @@ import com.example.moviestorenew.R
 import com.example.moviestorenew.home.data.Movie
 import com.squareup.picasso.Picasso
 
-class TopMoviesAdapter(
-    private val movies: List<Movie>
-) : RecyclerView.Adapter<TopMoviesAdapter.TopMoviesViewHolder>() {
+class TopMoviesAdapter() : RecyclerView.Adapter<TopMoviesAdapter.TopMoviesViewHolder>() {
+    private var movies = listOf<Movie>()
+
     class TopMoviesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val imageView: ImageView = view.findViewById(R.id.roundedImageView)
     }
@@ -23,7 +23,7 @@ class TopMoviesAdapter(
     }
 
     override fun onBindViewHolder(holder: TopMoviesViewHolder, position: Int) {
-        Picasso.get().load(movies[position].imageURL).into(holder.imageView)
+        Picasso.get().load(movies[position].imageUrl).into(holder.imageView)
     }
 
     override fun getItemCount() = movies.size

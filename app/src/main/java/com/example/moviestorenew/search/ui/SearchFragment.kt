@@ -15,15 +15,15 @@ class SearchFragment : Fragment(R.layout.search_fragment) {
         val searchBar: EditText = view.findViewById(R.id.searchBar_EditText)
         searchBar.requestFocus()
 
-        val moviesSearchRecyclerView: RecyclerView =
-            view.findViewById(R.id.moviesSearch_recyclerView)
-        moviesSearchRecyclerView.adapter = MoviesSearchAdapter(
-            Datasource.getMovies(),
-            requireContext()
-        )
+//        val moviesSearchRecyclerView: RecyclerView =
+//            view.findViewById(R.id.moviesSearch_recyclerView)
+//        moviesSearchRecyclerView.adapter = MoviesSearchAdapter(
+//            Datasource.getMovies(),
+//            requireContext()
+//        )
 
-        searchBar.addTextChangedListener {
-            (moviesSearchRecyclerView.adapter as MoviesSearchAdapter).setSearch(it.toString())
-        }
+//        searchBar.addTextChangedListener {
+//            (moviesSearchRecyclerView.adapter as MoviesSearchAdapter).setSearch(it.toString())
+//        }
     }
 }
