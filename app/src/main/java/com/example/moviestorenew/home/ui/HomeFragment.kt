@@ -3,7 +3,6 @@ package com.example.moviestorenew.home.ui
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviestorenew.R
@@ -125,14 +124,30 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
             }
         })
 
-        val topMoviesRecyclerView: RecyclerView = view.findViewById(R.id.topMovies_recyclerView)
-        topMoviesRecyclerView.adapter = TopMoviesAdapter()
+        val latestMoviesRecyclerView: RecyclerView = view.findViewById(R.id.topMovies_recyclerView)
+        latestMoviesRecyclerView.adapter = LatestMoviesAdapter()
+
+
+        apiInterface.latestMovies(
+            ApiInterface.API_KEY
+        ).enqueue(object : Callback<Discover?> {
+            override fun onResponse(call: Call<Discover?>, response: Response<Discover?>) {
+                if (response.body() != null) {
+                    (latestMoviesRecyclerView.adapter as LatestMoviesAdapter).setMovies(
+                        response.body()!!
+                    )
+                }
+            }
+
+            override fun onFailure(call: Call<Discover?>, t: Throwable) {}
+        })
 
 
         val searchBar: Button = view.findViewById(R.id.searchBar_button)
         searchBar.setOnClickListener {
-            activity?.findViewById<BottomNavigationView>(R.id.bottom_nav)?.selectedItemId =
-                R.id.searchFragment
+            requireActivity()
+                .findViewById<BottomNavigationView>(R.id.bottom_nav)
+                .selectedItemId = R.id.searchFragment
         }
 
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
@@ -142,7 +157,7 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
                     getString(R.string.now_playing) -> {
                         apiInterface.nowPlayingMovies(
                             ApiInterface.API_KEY,
-                            page = 1
+                            page = latestPage
                         )
                             .enqueue(object : Callback<Discover?> {
                                 override fun onResponse(
@@ -162,7 +177,7 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
                     getString(R.string.upcoming) -> {
                         apiInterface.upcomingMovies(
                             ApiInterface.API_KEY,
-                            page = 1
+                            page = latestPage
                         )
                             .enqueue(object : Callback<Discover?> {
                                 override fun onResponse(
@@ -182,7 +197,7 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
                     getString(R.string.top_rated) -> {
                         apiInterface.topRatedMovies(
                             ApiInterface.API_KEY,
-                            page = 1
+                            page = latestPage
                         )
                             .enqueue(object : Callback<Discover?> {
                                 override fun onResponse(
@@ -202,7 +217,7 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
                     getString(R.string.popular) -> {
                         apiInterface.popularMovies(
                             ApiInterface.API_KEY,
-                            page = 1
+                            page = latestPage
                         )
                             .enqueue(object : Callback<Discover?> {
                                 override fun onResponse(
