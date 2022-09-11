@@ -227,5 +227,7 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
             override fun onTabReselected(tab: TabLayout.Tab?) {}
         })
 
+        tabLayout.getTabAt(1)?.select()
+
     }
 }
