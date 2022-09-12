@@ -46,10 +46,14 @@ interface ApiInterface {
     ): Call<Discover>
 
     @GET("movie/{movie_id}")
-    fun getMovie(@Path("movie_id") movie_id: Int): Call<Movie>
+    fun getMovie(
+        @Path(value = "movie_id") movie_id: Int,
+        @Query("api_key") apiKey: String
+    ): Call<Movie>
 
     companion object {
-        const val IMAGE_URL: String = "https://image.tmdb.org/t/p/w200/"
+        const val IMAGE_URL: String = "https://image.tmdb.org/t/p/w185"
+        const val COVER_URL: String = "https://image.tmdb.org/t/p/w780"
         private const val BASE_URL = "https://api.themoviedb.org/3/"
         const val API_KEY = "c0175ab2a6bb9a81ce9320280ec0c021"
 

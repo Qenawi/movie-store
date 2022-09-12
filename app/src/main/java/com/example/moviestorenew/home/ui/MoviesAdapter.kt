@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviestorenew.R
 import com.example.moviestorenew.home.data.ApiInterface
@@ -11,10 +12,10 @@ import com.example.moviestorenew.home.data.Discover
 import com.example.moviestorenew.home.data.Movie
 import com.squareup.picasso.Picasso
 
-class MoviesAdapter() : RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>() {
+class MoviesAdapter : RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>() {
     private val displayedMovies = mutableListOf<Movie>()
 
-    class MoviesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class MoviesViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val imageView: ImageView = view.findViewById(R.id.roundedImageView)
     }
 
@@ -24,7 +25,15 @@ class MoviesAdapter() : RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>() {
     ): MoviesAdapter.MoviesViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.movie_card, parent, false)
-        return MoviesAdapter.MoviesViewHolder(view)
+        val holder = MoviesViewHolder(view)
+        holder.view.setOnClickListener {
+            holder.view.findNavController().navigate(
+                HomeFragmentDirections.actionHomeFragmentToDetailsFragment(
+                    displayedMovies[holder.adapterPosition].movieId
+                )
+            )
+        }
+        return holder
     }
 
     override fun onBindViewHolder(holder: MoviesAdapter.MoviesViewHolder, position: Int) {

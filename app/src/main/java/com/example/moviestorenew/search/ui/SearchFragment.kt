@@ -1,10 +1,15 @@
 package com.example.moviestorenew.search.ui
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
+import android.widget.Button
 import android.widget.EditText
+import androidx.core.content.getSystemService
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviestorenew.R
 import com.example.moviestorenew.home.data.ApiInterface
@@ -17,7 +22,14 @@ class SearchFragment : Fragment(R.layout.search_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val searchBar: EditText = view.findViewById(R.id.searchBar_EditText)
+        view.findViewById<Button>(R.id.backButton).setOnClickListener {
+            view.findNavController().navigateUp()
+        }
         searchBar.requestFocus()
+        (requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager).showSoftInput(
+            searchBar,
+            0
+        )
 
         val apiInterface = ApiInterface.create()
         var latestPage = 1
@@ -25,7 +37,7 @@ class SearchFragment : Fragment(R.layout.search_fragment) {
         val moviesSearchRecyclerView: RecyclerView =
             view.findViewById(R.id.moviesSearch_recyclerView)
 
-        moviesSearchRecyclerView.adapter = MoviesSearchAdapter(requireContext())
+        moviesSearchRecyclerView.adapter = MoviesSearchAdapter()
 
         searchBar.addTextChangedListener {
             latestPage = 1

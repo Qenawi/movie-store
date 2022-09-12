@@ -1,12 +1,11 @@
 package com.example.moviestorenew.search.ui
 
-import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviestorenew.R
 import com.example.moviestorenew.home.data.ApiInterface
@@ -15,12 +14,10 @@ import com.example.moviestorenew.home.data.Genre
 import com.example.moviestorenew.home.data.Movie
 import com.squareup.picasso.Picasso
 
-class MoviesSearchAdapter(
-    private val context: Context
-) : RecyclerView.Adapter<MoviesSearchAdapter.MoviesSearchViewHolder>() {
+class MoviesSearchAdapter : RecyclerView.Adapter<MoviesSearchAdapter.MoviesSearchViewHolder>() {
     private val displayedMovies = mutableListOf<Movie>()
 
-    class MoviesSearchViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class MoviesSearchViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val imageView: ImageView = view.findViewById(R.id.roundedImageView)
         val titleTextView: TextView = view.findViewById(R.id.movie_title_textView)
         val genreTextView: TextView = view.findViewById(R.id.movie_genre_textView)
@@ -31,7 +28,15 @@ class MoviesSearchAdapter(
         val view = LayoutInflater.from(parent.context).inflate(
             R.layout.movie_search_card, parent, false
         )
-        return MoviesSearchViewHolder(view)
+        val holder = MoviesSearchViewHolder(view)
+        holder.view.setOnClickListener {
+            holder.view.findNavController().navigate(
+                SearchFragmentDirections.actionSearchFragmentToDetailsFragment(
+                    displayedMovies[holder.adapterPosition].movieId
+                )
+            )
+        }
+        return holder
     }
 
     override fun onBindViewHolder(holder: MoviesSearchViewHolder, position: Int) {
