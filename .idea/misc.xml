@@ -13,6 +13,7 @@
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.1225" />
         <entry key="app/src/main/res/drawable/ic_ticket.xml" value="0.183" />
         <entry key="app/src/main/res/drawable/rectangle.xml" value="0.2005" />
+        <entry key="app/src/main/res/drawable/rounded_button.xml" value="0.201" />
         <entry key="app/src/main/res/drawable/rounded_edittext.xml" value="0.1" />
         <entry key="app/src/main/res/font-v26/made_tommy_font_family.xml" value="0.21897435897435896" />
         <entry key="app/src/main/res/font/louis_george_cafe_font_family.xml" value="0.19166666666666668" />
@@ -20,7 +21,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/details_fragment.xml" value="0.33" />
         <entry key="app/src/main/res/layout/home_fragment.xml" value="0.4161073825503356" />
-        <entry key="app/src/main/res/layout/login_fragment.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/login_fragment.xml" value="0.25" />
         <entry key="app/src/main/res/layout/movie_card.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/movie_search_card.xml" value="0.22" />
         <entry key="app/src/main/res/layout/register_fragment.xml" value="0.19270833333333334" />

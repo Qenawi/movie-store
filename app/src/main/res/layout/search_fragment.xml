@@ -33,6 +33,7 @@
             android:hint="@string/search"
             android:inputType="text"
             android:maxLines="1"
+            android:textColor="@color/white"
             android:paddingHorizontal="20dp"
             android:paddingVertical="12dp"
             android:scrollHorizontally="true"

@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.moviestorenew.R
 import com.example.moviestorenew.home.data.ApiInterface
 import com.example.moviestorenew.home.data.Discover
+import com.example.moviestorenew.home.data.Movie
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayout
 import retrofit2.Call
@@ -237,12 +238,16 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
                 }
             }
 
-            override fun onTabUnselected(tab: TabLayout.Tab?) {}
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+                (moviesRecyclerView.adapter as MoviesAdapter)
+                    .setMovies(Discover(listOf<Movie>()))
+            }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {}
         })
 
         tabLayout.getTabAt(1)?.select()
+        tabLayout.getTabAt(0)?.select()
 
     }
 }

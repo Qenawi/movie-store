@@ -20,7 +20,10 @@ class MainActivity : AppCompatActivity() {
         bottomNav.setupWithNavController(navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            if (destination.id == R.id.detailsFragment) {
+            if (listOf(R.id.detailsFragment, R.id.loginFragment, R.id.registerFragment).contains(
+                    destination.id
+                )
+            ) {
                 bottomNav.visibility = View.GONE
             } else {
                 bottomNav.visibility = View.VISIBLE

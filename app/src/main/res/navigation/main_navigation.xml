@@ -21,17 +21,29 @@
         android:id="@+id/loginFragment"
         android:name="com.example.moviestorenew.auth.login.ui.LoginFragment"
         android:label="LoginFragment"
-        tools:layout="@layout/login_fragment" />
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.moviestorenew.auth.register.ui.RegisterFragment"
         android:label="RegisterFragment"
-        tools:layout="@layout/register_fragment" />
+        tools:layout="@layout/register_fragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/watchlistFragment"
         android:name="com.example.moviestorenew.watchlist.ui.WatchlistFragment"
         android:label="WatchlistFragment"
-        tools:layout="@layout/watchlist_fragment" />
+        tools:layout="@layout/watchlist_fragment" >
+        <action
+            android:id="@+id/action_watchlistFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.moviestorenew.search.ui.SearchFragment"

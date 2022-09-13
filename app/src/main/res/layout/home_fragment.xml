@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/blue_grey"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -17,6 +18,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/louis_george_cafe_font_family"
             android:text="What do you want to watch?"
+            android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
